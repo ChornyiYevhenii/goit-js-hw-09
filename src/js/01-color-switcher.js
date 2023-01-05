@@ -10,7 +10,7 @@ const refs = {
 refs.body.addEventListener('click', onBtnClick)
 
 refs.stopBtn.setAttribute('disabled', true)
-let timerId = null;
+let idTimer = null;
 
 function onBtnClick(evt) {
     if(evt.target.hasAttribute('data-start')) {
@@ -27,7 +27,7 @@ function onStartBtnClick(evt) {
     
     let currentColor = getRandomHexColor();
     refs.body.style.backgroundColor = currentColor;
-    timerId = setInterval(()=>{
+    idTimer = setInterval(()=>{
         currentColor = getRandomHexColor();
         refs.body.style.backgroundColor = currentColor;
     }, 500);
@@ -36,7 +36,7 @@ function onStartBtnClick(evt) {
 function onStopBtnClick(evt) {
     refs.startBtn.removeAttribute('disabled')
     refs.stopBtn.setAttribute('disabled', true)
-    clearInterval(timerId)
+    clearInterval(idTimer)
     refs.body.style.backgroundColor = 'Color';
 }
 

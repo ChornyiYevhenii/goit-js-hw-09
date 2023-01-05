@@ -13,7 +13,7 @@ function onCreatePromiseBtnClick (evt) {
   evt.preventDefault();
   dataCollectedFromForm (evt)
   onStart(data)
-  // refs.form.reset();
+  
 }
 
 function dataCollectedFromForm (evt) {

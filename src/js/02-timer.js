@@ -13,10 +13,10 @@ const refs = {
 
 refs.startBtn.addEventListener('click', onStartBtnClick)
 
-let deltaTime = null;
-let timerId = null;
+let possibleTime = null;
+let idTimer = null;
 
-const flatpickrOptions = {
+const options = {
     enableTime: true,
     time_24hr: true,
     defaultDate: new Date(),
@@ -34,19 +34,19 @@ const flatpickrOptions = {
 addStyles ()
 beforeStartCountdown ()
 
-const pickr = new flatpickr('#datetime-picker', flatpickrOptions) 
+const pickr = new flatpickr('#datetime-picker', options) 
 
 function onStartBtnClick(evt){
-   timerId = setInterval(() => {
-        deltaTime = pickr.selectedDates[0] - new Date();
-        if(deltaTime < 0) {
-            clearInterval(timerId)
+   idTimer = setInterval(() => {
+        possibleTime = pickr.selectedDates[0] - new Date();
+        if(possibleTime < 0) {
+            clearInterval(idTimer)
             refs.startBtn.setAttribute('disabled', true)
             Notiflix.Notify.success('The promotion has ended!!! Select the end date of the promotion to start a new countdown.');
             return
         }
-        const time = convertMs(deltaTime);
-        updateClockface(time)
+        const times = convertMs(possibleTime);
+        updateClockface(times)
     }, 1000)
 }
 
