@@ -37,6 +37,6 @@ function onStopBtnClick(evt) {
     refs.startBtn.removeAttribute('disabled')
     refs.stopBtn.setAttribute('disabled', true)
     clearInterval(timerId)
-    refs.body.style.backgroundColor = 'currentColor';
+    refs.body.style.backgroundColor = 'Color';
 }
 
