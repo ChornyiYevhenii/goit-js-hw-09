@@ -89,24 +89,16 @@ function beforeStartCountdown () {
     refs.socondsCounter.textContent = `${seconds}`;
   }
 
-  function addStyles () {
-    refs.faceCounter.style.display = 'flex'
-    refs.faceCounter.style.marginTop = `${25}px`
-    refs.faceCounter.style.gap = `${30}px`
-    refs.daysCounter.style.display = 'flex'
-    refs.daysCounter.style.justifyContent = 'center'
-    refs.daysCounter.style.border = `solid`
-    refs.daysCounter.style.minWidth = `${110}px`
-    refs.hoursCounter.style.display = 'flex'
-    refs.hoursCounter.style.justifyContent = 'center'
-    refs.hoursCounter.style.border = `solid`
-    refs.hoursCounter.style.minWidth = `${110}px`
-    refs.minutesCounter.style.display = 'flex'
-    refs.minutesCounter.style.justifyContent = 'center'
-    refs.minutesCounter.style.border = `solid`
-    refs.minutesCounter.style.minWidth = `${110}px`
-    refs.socondsCounter.style.display = 'flex'
-    refs.socondsCounter.style.justifyContent = 'center'
-    refs.socondsCounter.style.border = `solid`
-    refs.socondsCounter.style.minWidth = `${110}px`
+
+ 
+function addStyles() {
+    // refs.daysCounter.style.cssText = "display: flex; justifyContent: center; border: solid; ";
+
+    // refs.hoursCounter.style.cssText = "display: flex; justifyContent: center; border: solid; width: 110px;";
+
+    // refs.minutesCounter.style.cssText = "display: flex; justifyContent: center; border: solid; width: 110px;";
+
+    // refs.socondsCounter.style.cssText = "display: flex; justifyContent: center; border: solid; width: 110px;";
+
   }
+
